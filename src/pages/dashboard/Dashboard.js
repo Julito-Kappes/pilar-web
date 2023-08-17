@@ -1,17 +1,6 @@
-import React, { useEffect } from "react";
-import {
-  Grid,
-  Paper,
-  Box,
-  Card,
-  CardHeader,
-  CardContent,
-  TextField,
-} from "@mui/material";
+import { Grid, Paper, Box, Card, CardHeader, CardContent } from "@mui/material";
 
-import Todo from "../todo/Todo";
-
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { appSelector } from "../../redux/appRedux";
 
 const Dashboard = () => {
