@@ -1,6 +1,7 @@
 const ADD_TODO = "ADD_TODO";
 const COMPLETE_TODO = "COMPLETE_TODO";
 const DELETE_TODO = "DELETE_TODO";
+const GET_COMPLETED_TODOS = "GET_COMPLETED_TODOS";
 
 const stateInitial = {
   todo: [],
@@ -62,6 +63,13 @@ export const appReducer = (state = stateInitial, action) => {
         ...state,
         todo: state.todo.filter((t) => t.id !== action.id),
       };
+
+    /* case GET_COMPLETED_TODOS:
+      return {
+        ...state,
+        completedTodos: state.todo.filter((t) => t.completed),
+      };
+*/
     default:
       return state;
   }
